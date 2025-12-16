@@ -45,7 +45,7 @@ export default function GlassWhatsAppCTA() {
                         aria-label="Start WhatsApp conversation"
                         className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold bg-green-600 text-red-600 dark:text-red-600 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors min-h-11"
                     >
-                        Buy Now
+                        Let's Talk
                     </a>
                 </div>
             </div>
