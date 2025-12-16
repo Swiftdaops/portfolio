@@ -11,11 +11,13 @@ import ThreeClickPurchaseFlow from "../components/Steezepurchaseflow.js";
 import SecurityArchitecture from "../components/Securityarchitecture";
 import SteezeOutcome from "../components/Steezeoutcome";
 import SteezeStoreCTA from "../components/Steezecta";
+import BuyNowButton from "../components/BuyNowButton.client";
 
 export default function Page1() {
   return (
     <main>
       <SteezeHero />
+      <BuyNowButton />
       <SteezeProblemSection />
       <SteezeSolutionSection />
       <SteezeShowcaseSection />

@@ -1,8 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Cookies from "js-cookie";
+import PriceDisplay from "./PriceDisplay.client";
 
 export default function SteezeStoreCTA() {
+    const [country, setCountry] = useState(Cookies.get("country") || "US");
     return (
         <section id="steeze-cta" className="relative w-full py-12 md:py-20 bg-[hsl(var(--background))] text-[hsl(var(--foreground))] overflow-hidden">
             {/* Glass sweep UI effect */}
@@ -47,11 +51,29 @@ export default function SteezeStoreCTA() {
                         <span className="text-xs uppercase tracking-[0.16em]">
                             Starting at
                         </span>
-                        <div className="mt-1 inline-flex items-baseline gap-1">
-                            <span className="text-3xl md:text-4xl font-bold text-emerald-400">
-                                $1,000
-                            </span>
-                            <span className="text-xs">USD · core Steeze Store setup</span>
+                        <div className="mt-1">
+                            <PriceDisplay />
+                        </div>
+
+                        <div className="mt-2">
+                            <label htmlFor="country-select" className="sr-only">Select country</label>
+                            <select
+                                id="country-select"
+                                value={country}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    Cookies.set("country", val, { expires: 30 });
+                                    setCountry(val);
+                                    // Refresh so client PriceDisplay picks up the new cookie
+                                    if (typeof window !== "undefined") window.location.reload();
+                                }}
+                                className="text-xs bg-transparent border border-slate-300 rounded px-2 py-1"
+                            >
+                                <option value="US">United States (USD)</option>
+                                <option value="CA">Canada (CAD)</option>
+                                <option value="AU">Australia (AUD)</option>
+                                <option value="NG">Nigeria (NGN)</option>
+                            </select>
                         </div>
                     </div>
                 </motion.div>
