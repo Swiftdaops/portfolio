@@ -64,8 +64,10 @@ export default function SteezeStoreCTA() {
                                     const val = e.target.value;
                                     Cookies.set("country", val, { expires: 30 });
                                     setCountry(val);
-                                    // Refresh so client PriceDisplay picks up the new cookie
-                                    if (typeof window !== "undefined") window.location.reload();
+                                    // Dispatch event so client components can update without reload
+                                    if (typeof window !== "undefined") {
+                                        window.dispatchEvent(new CustomEvent("countryChanged", { detail: val }));
+                                    }
                                 }}
                                 className="text-xs bg-transparent border border-slate-300 rounded px-2 py-1"
                             >

@@ -8,9 +8,27 @@ export default function PriceDisplay() {
   const [priceObj, setPriceObj] = useState({ price: 1000, currency: "USD" });
 
   useEffect(() => {
-    const country = Cookies.get("country") || "US";
-    const mapped = countryCurrencyMap[country] || { price: 1000, currency: "USD" };
-    setPriceObj(mapped);
+    const readFromCookie = () => {
+      const country = Cookies.get("country") || "US";
+      const mapped = countryCurrencyMap[country] || { price: 1000, currency: "USD" };
+      setPriceObj(mapped);
+    };
+
+    // initial read
+    readFromCookie();
+
+    // handle async updates dispatched from other client components
+    const onCountryChanged = (e) => {
+      if (!e?.detail) return;
+      const mapped = countryCurrencyMap[e.detail] || { price: 1000, currency: "USD" };
+      setPriceObj(mapped);
+    };
+
+    window.addEventListener("countryChanged", onCountryChanged);
+
+    return () => {
+      window.removeEventListener("countryChanged", onCountryChanged);
+    };
   }, []);
 
   return (
