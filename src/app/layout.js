@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import CleanBodyAttr from "./components/CleanBodyAttr.client";
+import Script from 'next/script';
+import { ThemeProvider } from "./components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +22,26 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const isDev = process.env.NODE_ENV === 'development';
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={isDev}>
+      <head>
+        {/* Run before React hydration to remove extension-injected attributes */}
+        <Script id="cleanup-cz-attrs" strategy="beforeInteractive">
+{`try{(function(){var r=document.documentElement,c=document.body; if(r&&r.getAttributeNames){r.getAttributeNames().forEach(function(n){ if(n&&n.startsWith('cz-')) r.removeAttribute(n); }); } if(c&&c.getAttributeNames){c.getAttributeNames().forEach(function(n){ if(n&&n.startsWith('cz-')) c.removeAttribute(n); }); }})();}catch(e){}`}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={isDev}
       >
-        {children}
+        {/* Client-side cleanup (keeps acting after mount as a fallback) */}
+        <CleanBodyAttr />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
