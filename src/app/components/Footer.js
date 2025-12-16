@@ -107,31 +107,15 @@ export default function Footer({
             </div>
           </div>
 
-          {/* Bottom row */}
-          <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-stone-200 pt-6 text-xs text-stone-500 dark:border-stone-800 dark:text-stone-400">
-            <p>© {new Date().getFullYear()} Obi Tobechukwu. All rights reserved.</p>
-            <p className="text-stone-500 dark:text-stone-400">
-              Built with React • Tailwind 
-            </p>
-          </div>
-        </div>
-      </footer>
-
-      {/* Two full-width mobile buttons AFTER the footer (last items) */}
-      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-20 pb-10 pt-5">
-        <div className="grid gap-3 sm:grid-cols-1">
-          <a
-            href={primaryCta.href}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex w-full justify-center rounded-xl bg-stone-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-stone-400 dark:bg-white dark:text-stone-900 dark:focus:ring-stone-600"
-            aria-label={primaryCta.label}
-          >
-            {primaryCta.label}
-          </a>
-        </div>
-      </div>
-      {/* Glass CTA (fixed) */}
+        {/* Bottom row */}
+                  <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-stone-200 pt-6 text-xs text-stone-500 dark:border-stone-800 dark:text-stone-400">
+                    <p>© {new Date().getFullYear()} Obi Tobechukwu. All rights reserved.</p>
+                    <p className="text-stone-500 dark:text-stone-400">
+                      Built with React • Tailwind 
+                    </p>
+                  </div>
+                </div>
+              </footer>
       <GlassWhatsAppCTA />
     </>
   );

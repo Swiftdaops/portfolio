@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import TechStack, { ALL as TECH_ALL, TechBadge } from "./techstack";
 
 // simple character-by-character typing animation
@@ -20,7 +21,7 @@ const typingChar = {
   visible: { opacity: 1, y: "0em" },
 };
 
-const typedText = "Hi, my name is Obi. 🤝";
+const typedText = "Hi, my name is Obi.";
 
 export default function Hero() {
   const whatsappNumber = "14376654926"; // replace with your full intl number (no +)
@@ -37,7 +38,7 @@ export default function Hero() {
         <div className="w-full order-2 lg:order-1 text-center lg:text-left min-w-0 p-6 sm:p-8 lg:p-0">
           {/* Typed line */}
           <motion.h2
-            className="text-xs sm:text-sm tracking-[0.12em] uppercase whitespace-normal wrap-break-word max-w-full"
+            className="text-xs sm:text-sm tracking-[0.12em] uppercase whitespace-normal wrap-break-word max-w-full inline-flex items-center gap-[1px]"
             variants={typingContainer}
             initial="hidden"
             animate="visible"
@@ -47,6 +48,19 @@ export default function Hero() {
                 {char}
               </motion.span>
             ))}
+            {/* DotLottie animation (replaces handshake emoji) */}
+              <motion.span key="dotlottie" variants={typingChar} aria-hidden="true" className="inline-flex items-center align-middle">
+                <span className="rounded-full p-1 dark:bg-white/20  inline-flex items-center align-middle">
+                  <span className="rounded-full overflow-hidden h-6 w-6 inline-block align-middle">
+                    <DotLottieReact
+                      src="https://lottie.host/19ace919-3012-4c75-9b48-23ec358bb406/cuSRcBqQI8.lottie"
+                      loop
+                      autoplay
+                      className="h-6 w-6 inline-block align-middle"
+                    />
+                  </span>
+                </span>
+              </motion.span>
           </motion.h2>
 
           {/* Main heading + Subtext (centered on mobile) */}

@@ -99,7 +99,7 @@ export default function EbooksHero({
                             {...fadeUp}
                             className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-stone-900 dark:text-white"
                         >
-                            Ebooks — a theme-aware ebook storefront with a 3-click WhatsApp purchase flow.
+                            Ebooks — A secure, theme-aware storefront where readers connect with authors and complete purchases in 3 simple WhatsApp clicks.
                         </motion.h1>
 
                         <motion.p

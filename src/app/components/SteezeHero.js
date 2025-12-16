@@ -2,7 +2,7 @@
 import SteezeHeroClient from "./SteezeHero.client";
 
 export default function SteezeHero({
-    title = "The Steeze Store — Fast, Stylish E-Commerce",
+    title = "The Steeze Store — Smooth, Elegant E-Commerce for Your Customers",
     subtitle =
         "The Steeze Store delivers a fast, elegant shopping experience built with modern web technologies—focused on smooth interactions, mobile performance, and instant WhatsApp checkout so your customers can buy with confidence.",
     demoUrl = "https://thesteezestore.netlify.app/",
