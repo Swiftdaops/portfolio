@@ -28,14 +28,7 @@ export default function GlassWhatsAppCTA() {
 
                 {/* Content */}
                 <div className="relative flex flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-                    <div className="text-sm sm:text-base text-stone-600 dark:text-white">
-                        <p className="font-semibold">
-                            Ready to buy a website for your business ?
-                        </p>
-                        <p className="opacity-80 text-xs sm:text-sm">
-                            Start a quick WhatsApp conversation — no forms, no friction.
-                        </p>
-                    </div>
+                    <div className="text-sm sm:text-base text-stone-600 dark:text-white" />
 
                     {/* CTA Button */}
                     <a
