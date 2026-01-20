@@ -34,8 +34,9 @@ const apps = [
   {
     name: "OkPups",
     slug: "/okpups",
+    logo: "https://res.cloudinary.com/dzifobwnx/image/upload/v1766686429/ChatGPT_Image_Dec_25__2025__06_32_34_PM-removebg-preview_xeevlc.png",
     price: "$1,200",
-    delivery: "14 days",
+    delivery: "30 days",
     summary:
       "A puppy-focused storefront with listings, simple purchase flow, and admin tools for sellers.",
     highlights: [
@@ -71,11 +72,20 @@ export default function BusinessAppsForSale() {
             key={app.name}
             className="relative overflow-hidden border bg-background/60 backdrop-blur-sm"
           >
-            <CardHeader>
-              <div className="flex items-center justify-between gap-4">
-                <CardTitle className="text-xl">{app.name}</CardTitle>
-              </div>
-            </CardHeader>
+              <CardHeader>
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    {app.logo && (
+                      <img
+                        src={app.logo}
+                        alt={`${app.name} logo`}
+                        className="h-10 w-10 object-contain rounded"
+                      />
+                    )}
+                    <CardTitle className="text-xl">{app.name}</CardTitle>
+                  </div>
+                </div>
+              </CardHeader>
 
             <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
