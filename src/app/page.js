@@ -20,14 +20,14 @@ export const metadata = {
   ],
   authors: [{ name: "Obi Tobechukwu" }],
   creator: "Obi Tobechukwu",
-  alternates: {
-    canonical: "https://your-domain.com",
+    alternates: {
+    canonical: "https://www.upgradedbyobi.store",
   },
   openGraph: {
     title: "Obi Tobechukwu – Full-Stack Web Developer",
     description:
       "I design beautiful, scalable and secure web apps for businesses in the USA, Canada, and Australia.",
-    url: "https://your-domain.com",
+    url: "https://www.upgradedbyobi.store",
     siteName: "Obi Tobechukwu Portfolio",
     locale: "en_US",
     type: "website",

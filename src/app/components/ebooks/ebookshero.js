@@ -10,7 +10,7 @@ import { motion, useReducedMotion } from "framer-motion";
  * Place this file in your app/components/... as a .jsx/.js file.
  */
 export default function EbooksHero({
-    projectUrl = "https://yourdomain.com/projects/ebooks",
+    projectUrl = "https://www.upgradedbyobi.store/projects/ebooks",
     demoUrl = "https://ebooksinternationalbookstore.netlify.app",
     whatsappUrl = "https://wa.me/14376654926?text=Hi%20Obi%2C%20I%20want%20Ebooks%20for%20my%20bookstore.%20Price%3A%20%241000.%20Please%20share%20next%20steps.",
     priceUSD = 1000,

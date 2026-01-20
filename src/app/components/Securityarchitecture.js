@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function SecurityArchitecture({
     title = "Secure by Design — Steeze Store",
     description = "Steeze Store is engineered with security as a first-class feature — from hashed admin passwords to role-based access and sanitized inputs to protect owners and customers.",
-    url = "https://yourdomain.com/security-architecture",
-    image = "https://yourdomain.com/og-image.png",
+    url = "https://www.upgradedbyobi.store/security-architecture",
+    image = "https://www.upgradedbyobi.store/og-image.png",
 }) {
     return (
         <>

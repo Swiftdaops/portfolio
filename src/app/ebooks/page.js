@@ -1,5 +1,6 @@
 import EbooksHero from "../components/ebooks/ebookshero";
 import EbooksValueProp from "../components/ebooks/ebookssolutions";
+import EbooksSeoMagnet from "../components/ebooks/ebooksseo";
 import EbooksPricing from "../components/ebooks/ebookspricing";
 import EbooksWhoItsFor from "../components/ebooks/ebookswho";
 import BuyNowEbooks from "../components/BuyNowEbooks.client";
@@ -21,6 +22,7 @@ export default function Page2() {
         <span className="text-sm font-semibold">Pricing</span>
       </a>
       <BuyNowEbooks />
+      <EbooksSeoMagnet />
       <EbooksHero />
       <EbooksValueProp />
       <EbooksWhoItsFor />

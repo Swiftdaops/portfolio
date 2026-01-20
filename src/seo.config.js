@@ -1,4 +1,4 @@
-const SITE_URL = 'https://yourdomain.com';
+const SITE_URL = 'https://www.upgradedbyobi.store';
 
 const SEO = {
   titleTemplate: '%s | Obi Tobechukwu',

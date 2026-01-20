@@ -52,6 +52,9 @@ export default function Navbar() {
           <Link href="/ebooks" className="hover:underline">
             Ebooks
           </Link>
+          <Link href="/okpups" className="hover:underline">
+            OK Pups
+          </Link>
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
@@ -128,6 +131,9 @@ export default function Navbar() {
             </Link>
             <Link href="/ebooks" onClick={() => setOpen(false)} className="py-2">
               Ebooks
+            </Link>
+            <Link href="/okpups" onClick={() => setOpen(false)} className="py-2">
+              OK Pups
             </Link>
           </div>
         </div>
