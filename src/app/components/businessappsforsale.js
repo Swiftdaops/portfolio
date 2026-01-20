@@ -31,6 +31,19 @@ const apps = [
         "Modern UI",
     ],
   },
+  {
+    name: "OkPups",
+    slug: "/okpups",
+    price: "$1,200",
+    delivery: "14 days",
+    summary:
+      "A puppy-focused storefront with listings, simple purchase flow, and admin tools for sellers.",
+    highlights: [
+      "Puppy listings & profiles",
+      "WhatsApp purchase flow",
+      "Seller admin dashboard",
+    ],
+  },
 ];
 
 export default function BusinessAppsForSale() {
