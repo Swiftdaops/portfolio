@@ -11,7 +11,7 @@ import { motion, useReducedMotion } from "framer-motion";
  */
 export default function EbooksHero({
     projectUrl = "https://www.upgradedbyobi.store/projects/ebooks",
-    demoUrl = "https://ebooksinternationalbookstore.netlify.app",
+    demoUrl = "https://ebooks-sigma.vercel.app/",
     whatsappUrl = "https://wa.me/14376654926?text=Hi%20Obi%2C%20I%20want%20Ebooks%20for%20my%20bookstore.%20Price%3A%20%241000.%20Please%20share%20next%20steps.",
     priceUSD = 1000,
     techStack = ["React (JSX)", "Tailwind CSS", "Framer Motion", "Node.js", "MongoDB", "WhatsApp API Flow"],
