@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SEO from "../seo.config";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CleanBodyAttr from "./components/CleanBodyAttr.client";
@@ -26,6 +27,34 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{SEO.defaultTitle}</title>
+        <meta name="description" content={SEO.description} />
+        <link rel="canonical" href={SEO.canonical} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="application-name" content={SEO.openGraph.siteName} />
+        <meta name="author" content="Obi Tobechukwu" />
+        <meta name="attribution" content="Cute icons created by Smashicons - Flaticon https://www.flaticon.com/free-icons/cute" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={SEO.defaultTitle} />
+        <meta property="og:description" content={SEO.description} />
+        <meta property="og:type" content={SEO.openGraph.type} />
+        <meta property="og:locale" content={SEO.openGraph.locale} />
+        <meta property="og:site_name" content={SEO.openGraph.siteName} />
+        <meta property="og:url" content={SEO.openGraph.url} />
+        {SEO.openGraph.images && SEO.openGraph.images[0] && (
+          <meta property="og:image" content={SEO.openGraph.images[0].url} />
+        )}
+
+        {/* Twitter */}
+        <meta name="twitter:card" content={SEO.twitter.cardType} />
+        <meta name="twitter:site" content={SEO.twitter.site} />
+        <meta name="twitter:creator" content={SEO.twitter.handle} />
+
         {/* Run before React hydration to remove extension-injected attributes */}
         <Script id="cleanup-cz-attrs" strategy="beforeInteractive">
 {`try{(function(){var r=document.documentElement,c=document.body; if(r&&r.getAttributeNames){r.getAttributeNames().forEach(function(n){ if(n&&n.startsWith('cz-')) r.removeAttribute(n); }); } if(c&&c.getAttributeNames){c.getAttributeNames().forEach(function(n){ if(n&&n.startsWith('cz-')) c.removeAttribute(n); }); }})();}catch(e){}`}

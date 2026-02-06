@@ -40,7 +40,7 @@ export default function EbooksPricing({
 
     const addOns = [
         { title: "Multi-vendor (multiple book owners)", price: 400, note: "Each vendor can upload/manage their own catalog." },
-        { title: "Payment gateway integration", price: 250, note: "Card/transfer support with confirmation tracking." },
+        { title: "Payment gateway integration", price: 1050, note: "Card/transfer support with confirmation tracking." },
         { title: "PDF → AI audiobook module (future feature)", price: 1500, note: "Convert ebooks to audiobooks + summary option." },
         { title: "Admin analytics dashboard", price: 500, note: "Sales insights, top books, conversion tracking." },
     ];
